@@ -13,9 +13,11 @@ public class Controlador {
 
         HashMap<Integer, Sensor> sensores = gestionArchivos.leerArchivoSensores();
         gestionArchivos.escribirArchivoCopiaSensores(sensores);
+        System.out.println("Copia de archivo en texto plano guardada correctamente.");
 
         HashMap<Integer, Sensor> sensoresBin = gestionArchivos.leerArchivoCopiaSensores();
         gestionArchivos.escribirArchivoSensoresBin(sensoresBin);
+        System.out.println("Archivo binario guardado correctamente.");
 
         gestionSensores.mostrarSensores(sensoresBin);
     }
