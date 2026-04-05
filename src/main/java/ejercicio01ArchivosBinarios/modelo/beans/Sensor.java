@@ -3,21 +3,21 @@ package ejercicio01ArchivosBinarios.modelo.beans;
 import java.util.ArrayList;
 
 public class Sensor {
-    private Integer idSensor;
-    private Integer numDatos;
+    private int idSensor;
+    private int numDatos;
     private ArrayList<Double> datos;
 
-    public Sensor(Integer idSensor, Integer numDatos, ArrayList<Double> datos) {
+    public Sensor(int idSensor, int numDatos, ArrayList<Double> datos) {
         this.idSensor = idSensor;
         this.numDatos = numDatos;
         this.datos = datos;
     }
 
-    public Integer getIdSensor() {
+    public int getIdSensor() {
         return idSensor;
     }
 
-    public Integer getNumDatos() {
+    public int getNumDatos() {
         return numDatos;
     }
 
@@ -27,7 +27,7 @@ public class Sensor {
 
     @Override
     public int hashCode() {
-        return this.idSensor.hashCode();
+        return Integer.hashCode(this.idSensor);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Sensor {
         if (obj == null || getClass() != obj.getClass()) return false;
         Sensor sensor = (Sensor) obj;
 
-        return this.idSensor.equals(sensor.getIdSensor());
+        return this.idSensor == sensor.getIdSensor();
     }
 
     @Override
