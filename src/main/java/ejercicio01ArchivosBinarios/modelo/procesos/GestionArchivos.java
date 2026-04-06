@@ -43,7 +43,7 @@ public class GestionArchivos {
 
     public HashMap<Integer, Sensor> leerArchivoCopiaSensores() {
         String linea;
-        HashMap<Integer, Sensor> sensores = leerArchivoSensores();
+        HashMap<Integer, Sensor> sensores = new HashMap<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader("copiaSensores.txt"))) {
             while ((linea = br.readLine()) != null) {
